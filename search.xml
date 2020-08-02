@@ -4,11 +4,36 @@
   
     
     <entry>
-      <title>Helloworld Javer</title>
-      <link href="/2020/07/30/helloworld-javer/"/>
-      <url>/2020/07/30/helloworld-javer/</url>
+      <title>LeetCode 团灭dp算法</title>
+      <link href="/2020/08/01/leetcode-tuan-mie-dp-suan-fa/"/>
+      <url>/2020/08/01/leetcode-tuan-mie-dp-suan-fa/</url>
       
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h1 id="DP算法总结"><a href="#DP算法总结" class="headerlink" title="DP算法总结"></a>DP算法总结</h1><a id="more"></a><h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>符合最优子结构</p><blockquote><p>在任意状态时 子问题必须互相<strong>独立</strong> <br><br>说人话 每个状态都可以作为当前的答案 最终答案也只是一个状态下的对应解而已</p></blockquote><h3 id="基本dp流程"><a href="#基本dp流程" class="headerlink" title="基本dp流程"></a>基本dp流程</h3><blockquote><p>明确「状态」 -&gt; 定义 dp 数组/函数的含义 -&gt; 明确「选择」-&gt; 明确 base case</p></blockquote><p>dp数组的定义不同 会有不同解法<br>状态可以选index 也可以选max length 甚至可以是答案</p><ol><li>状态<br>举例：<br>可能是index<br>可能是目标金额</li><li>dp函数的定义<br>函数 dp(n)表示，当前的目标金额是n，至少需要dp(n)个硬币</li><li>确定「选择」并择优<br>选择可能有很多种<br>比如 盗窃问题里偷或不偷 也可能是多选中的一种 用for循环去对选择择优</li><li>明确 base case</li></ol><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>Top Bottom：递归<br><img src="/ajaverslife.github.io/2020/08/01/leetcode-tuan-mie-dp-suan-fa/LeetCode-%E5%9B%A2%E7%81%ADdp%E7%AE%97%E6%B3%95/dp_recursive.png" alt="recursive"></p><p>Bottom Top：迭代<br><img src="/ajaverslife.github.io/2020/08/01/leetcode-tuan-mie-dp-suan-fa/LeetCode-%E5%9B%A2%E7%81%ADdp%E7%AE%97%E6%B3%95/dp_iterative.png" alt="iterative"></p><h3 id="最后考虑去除dp数组"><a href="#最后考虑去除dp数组" class="headerlink" title="最后考虑去除dp数组"></a>最后考虑去除dp数组</h3><p>如果每个状态只跟其他一两个状态有关系 那么只用几个变量var来存previous状态 从而不用整个数组</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode 团灭 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>post文章 讲解</title>
+      <link href="/2020/07/30/fa-bu-wen-zhang-shuo-ming-shu/"/>
+      <url>/2020/07/30/fa-bu-wen-zhang-shuo-ming-shu/</url>
+      
+        <content type="html"><![CDATA[<p>发布文章说明书(๑•̀ㅂ•́)و✧</p><a id="more"></a><ol><li><p>标题：</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></tbody></table></figure></li><li><p>列表</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">有序</span><br><span class="line">    Num + .</span><br><span class="line"></span><br><span class="line">无序</span><br><span class="line">    标题 *</span><br><span class="line">        引用 &gt;</span><br></pre></td></tr></tbody></table></figure></li><li><p>分割线 —–</p></li><li><p>链接</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">转换</span><br><span class="line">    [菜鸟教程](https://www.runoob.com)</span><br><span class="line">直接引用</span><br><span class="line">    &lt;https://www.runoob.com&gt;</span><br></pre></td></tr></tbody></table></figure></li><li><p>加载图片</p></li></ol><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">{% asset_path slug %}</span><br><span class="line">{% asset_img slug [title] %}</span><br><span class="line">{% asset_link slug [title] %}</span><br><span class="line">{% asset_img example.jpg This is an example image %} <span class="comment">## 举例</span></span><br></pre></td></tr></tbody></table></figure><ol start="6"><li>代码块</li></ol><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">单行 ``</span><br><span class="line">段落 ``````</span><br></pre></td></tr></tbody></table></figure><ol start="7"><li>强调<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">###强调 </span><br><span class="line">_倾斜_</span><br><span class="line">**加粗**</span><br></pre></td></tr></tbody></table></figure></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       

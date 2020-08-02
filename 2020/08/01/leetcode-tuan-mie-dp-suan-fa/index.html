@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Helloworld Javer, A Javer&#39;s Life">
+    <meta name="keywords" content="LeetCode 团灭dp算法, A Javer&#39;s Life">
     <meta name="description" content="He does more than just Javaing">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Helloworld Javer | A Javer&#39;s Life</title>
+    <title>LeetCode 团灭dp算法 | A Javer&#39;s Life</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Helloworld Javer</h1>
+                    <h1 class="description center-align post-title">LeetCode 团灭dp算法</h1>
                 </div>
             </div>
         </div>
@@ -428,12 +428,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/LeetCode-%E5%9B%A2%E7%81%AD/">
+                                <span class="chip bg-color">LeetCode 团灭</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/LeetCode/" class="post-category">
+                                LeetCode
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -442,7 +455,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-07-30
+                    2020-08-01
                 </div>
                 
 
@@ -458,7 +471,26 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h1 id="DP算法总结"><a href="#DP算法总结" class="headerlink" title="DP算法总结"></a>DP算法总结</h1><a id="more"></a>
+
+<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>符合最优子结构</p>
+<blockquote>
+<p>在任意状态时 子问题必须互相<strong>独立</strong> <br><br>说人话 每个状态都可以作为当前的答案 最终答案也只是一个状态下的对应解而已</p>
+</blockquote>
+<h3 id="基本dp流程"><a href="#基本dp流程" class="headerlink" title="基本dp流程"></a>基本dp流程</h3><blockquote>
+<p>明确「状态」 -&gt; 定义 dp 数组/函数的含义 -&gt; 明确「选择」-&gt; 明确 base case</p>
+</blockquote>
+<p>dp数组的定义不同 会有不同解法<br>状态可以选index 也可以选max length 甚至可以是答案</p>
+<ol>
+<li>状态<br>举例：<br>可能是index<br>可能是目标金额</li>
+<li>dp函数的定义<br>函数 dp(n)表示，当前的目标金额是n，至少需要dp(n)个硬币</li>
+<li>确定「选择」并择优<br>选择可能有很多种<br>比如 盗窃问题里偷或不偷 也可能是多选中的一种 用for循环去对选择择优</li>
+<li>明确 base case</li>
+</ol>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>Top Bottom：递归<br><img src="/ajaverslife.github.io/2020/08/01/leetcode-tuan-mie-dp-suan-fa/LeetCode-%E5%9B%A2%E7%81%ADdp%E7%AE%97%E6%B3%95/dp_recursive.png" alt="recursive"></p>
+<p>Bottom Top：迭代<br><img src="/ajaverslife.github.io/2020/08/01/leetcode-tuan-mie-dp-suan-fa/LeetCode-%E5%9B%A2%E7%81%ADdp%E7%AE%97%E6%B3%95/dp_iterative.png" alt="iterative"></p>
+<h3 id="最后考虑去除dp数组"><a href="#最后考虑去除dp数组" class="headerlink" title="最后考虑去除dp数组"></a>最后考虑去除dp数组</h3><p>如果每个状态只跟其他一两个状态有关系 那么只用几个变量var来存previous状态 从而不用整个数组</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -501,7 +533,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hangpei-bazahei/ajaverslife.github.io/2020/07/30/helloworld-javer/">https://hangpei-bazahei/ajaverslife.github.io/2020/07/30/helloworld-javer/</a>
+                    <a href="https://hangpei-bazahei/ajaverslife.github.io/2020/08/01/leetcode-tuan-mie-dp-suan-fa/">https://hangpei-bazahei/ajaverslife.github.io/2020/08/01/leetcode-tuan-mie-dp-suan-fa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -538,7 +570,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/LeetCode-%E5%9B%A2%E7%81%AD/">
+                                    <span class="chip bg-color">LeetCode 团灭</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -709,37 +745,53 @@
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/2020/07/30/helloworld-javer/">
+                <a href="/2020/08/01/leetcode-tuan-mie-dp-suan-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Helloworld Javer">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="LeetCode 团灭dp算法">
                         
-                        <span class="card-title">Helloworld Javer</span>
+                        <span class="card-title">LeetCode 团灭dp算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            DP算法总结
+
+前提符合最优子结构
+
+在任意状态时 子问题必须互相独立 说人话 每个状态都可以作为当前的答案 最终答案也只是一个状态下的对应解而已
+
+基本dp流程
+明确「状态」 -&gt; 定义 dp 数组/函数的含义 -&gt; 明确「选
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Hang Pei
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/LeetCode/" class="post-category">
+                                    LeetCode
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/LeetCode-%E5%9B%A2%E7%81%AD/">
+                        <span class="chip bg-color">LeetCode 团灭</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -750,19 +802,27 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/30/hello-world/">
+                <a href="/2020/07/30/fa-bu-wen-zhang-shuo-ming-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="post文章 讲解">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">post文章 讲解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            发布文章说明书(๑•̀ㅂ•́)و✧
+
+
+
+标题：
+123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题
+
+列表
+123456有序    Num + .无序    标题 *    
                         
                     </div>
                     <div class="publish-info">
