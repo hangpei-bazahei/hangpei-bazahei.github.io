@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.0.0"></head>
 
 
 <body>
@@ -471,8 +471,8 @@
 <p><strong>状态</strong>: 前后index<br><strong>dp</strong>: 使用boolen [][]来保存每个substring的结果 i j是substring的前后index  </p>
 </blockquote>
 <p>状态转移:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>l<span class="token operator">==</span>r <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>i<span class="token operator">-</span>j<span class="token operator">&lt;=</span><span class="token number">2</span><span class="token operator">||</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></code></pre>
+<pre><code class="java">if(l==r &amp;&amp; (i-j&lt;=2||dp[i-1][j+1]==true))
+    dp[i][j] = true;</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -516,7 +516,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hangpei-bazahei.github.io/leetcode-daily">https://hangpei-bazahei.github.io/leetcode-daily</a>
+                    <a href="https://hangpei-bazahei.github.io/2020/08/02/leetcode-daily/">https://hangpei-bazahei.github.io/2020/08/02/leetcode-daily/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -724,7 +724,7 @@
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/leetcode-daily">
+                <a href="/2020/08/02/leetcode-daily/">
                     <div class="card-image">
                         
                         
