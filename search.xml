@@ -2,6 +2,163 @@
 <search> 
   
   
+    
+    <entry>
+      <title>LeetCode-团灭二分法</title>
+      <link href="/2020/08/04/leetcode-tuan-mie-er-fen-fa/"/>
+      <url>/2020/08/04/leetcode-tuan-mie-er-fen-fa/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Binary-Search算法总结"><a href="#Binary-Search算法总结" class="headerlink" title="Binary Search算法总结"></a>Binary Search算法总结</h2><a id="more"></a><h3 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h3><p>二分查找真正的坑根本就不是那个细节问题，而是在于到底要给 mid 加一还是减一，while 里到底用 &lt;= 还是 &lt;</p><h3 id="普通二分"><a href="#普通二分" class="headerlink" title="普通二分"></a>普通二分</h3><p>统一规定： 使用闭合区间搜索[left,right] 使用while(&lt;=) mid+-1<br>这样保证left==right也会搜索  </p><h3 id="寻找左边界的二分"><a href="#寻找左边界的二分" class="headerlink" title="寻找左边界的二分"></a>寻找左边界的二分</h3><p>这时 即使正好找到target 也不一定是左边界答案了<br>搜索范围左闭右开 [left, right) right初始值nums.length 不用-1  </p><p>While(&lt;)<br><img src="/2020/08/04/leetcode-tuan-mie-er-fen-fa/binary_left_border.png" alt="binary_left_border"></p><h3 id="寻找右边界的二分"><a href="#寻找右边界的二分" class="headerlink" title="寻找右边界的二分"></a>寻找右边界的二分</h3><p>比较复杂 依然是左闭右开 循环结束是left是第一个大于target的数（因为找到时left=mid+1）  </p><p><img src="/2020/08/04/leetcode-tuan-mie-er-fen-fa/binary_right_border.png" alt="binary_right_border"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 团灭 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode-团灭bfs</title>
+      <link href="/2020/08/03/leetcode-tuan-mie-bfs/"/>
+      <url>/2020/08/03/leetcode-tuan-mie-bfs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="BFS算法总结"><a href="#BFS算法总结" class="headerlink" title="BFS算法总结"></a>BFS算法总结</h2><a id="more"></a><h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>问题的本质就是让你在一幅「图」中找到从起点 start 到终点 target 的最近距离</p><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p><img src="/2020/08/03/leetcode-tuan-mie-bfs/bfs_template.png" alt="bfs_template"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 团灭 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode-团灭dfs</title>
+      <link href="/2020/08/03/leetcode-tuan-mie-dfs/"/>
+      <url>/2020/08/03/leetcode-tuan-mie-dfs/</url>
+      
+        <content type="html"><![CDATA[<h2 id="DFS算法总结"><a href="#DFS算法总结" class="headerlink" title="DFS算法总结"></a>DFS算法总结</h2><a id="more"></a><h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>dfs算法 就是回溯</p><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><ol><li>判断边界  </li><li>根据条件递归  </li><li>optional回溯  </li></ol><p>回溯是重新初始化 这样是可以再下次重新递归的时候 重新开始<br>不像动态规划存在重叠子问题可以优化，回溯算法就是纯暴力穷举，复杂度一般都很高</p><p><img src="/2020/08/03/leetcode-tuan-mie-dfs/dfs_template.png" alt="dfs_template"></p><p><strong>有的时候，我们并不想得到所有合法的答案，只想要一个答案</strong><br>使用boolen修饰backtrack方法<br>这样一旦返回true 就结束循环<br><img src="/2020/08/03/leetcode-tuan-mie-dfs/dfs_template_one_answer.png" alt="dfs_template_one_answer"></p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>subnet Permutations Combination Sum</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode 团灭 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode-Daily</title>
+      <link href="/2020/08/02/leetcode-daily/"/>
+      <url>/2020/08/02/leetcode-daily/</url>
+      
+        <content type="html"><![CDATA[<h2 id="每日一题"><a href="#每日一题" class="headerlink" title="每日一题"></a>每日一题</h2><h2 id="dp"><a href="#dp" class="headerlink" title="dp"></a>dp</h2><hr><h3 id="Palindromic系列"><a href="#Palindromic系列" class="headerlink" title="Palindromic系列"></a>Palindromic系列</h3><h4 id="5-Longest-Palindromic-Substring"><a href="#5-Longest-Palindromic-Substring" class="headerlink" title="5 Longest Palindromic Substring"></a>5 Longest Palindromic Substring</h4><blockquote><p><strong>状态</strong>: 前后index<br><strong>dp</strong>: 使用boolen [][]来保存每个substring的结果 i j是substring的前后index  </p></blockquote><p>状态转移:</p><pre><code class="java">if(l==r &amp;&amp; (i-j&lt;=2||dp[i-1][j+1]==true))    dp[i][j] = true;</code></pre><h4 id="131-Palindrome-Partitioning"><a href="#131-Palindrome-Partitioning" class="headerlink" title="131 Palindrome Partitioning"></a>131 Palindrome Partitioning</h4><p>找出全部组合 使用dfs+dp<br>dp[][]负责boolean记录左右index<br>dfs再使用单for循环 暴力找答案</p><blockquote><p>dfs的选择: 从左侧开始 选择多长的substring作为第一起点<br>当左侧是完全对称 加入list 然后继续递归右侧  </p></blockquote><pre><code class="java">for(int i = pos; i &lt; s.length(); i++) &amp;#123;    if(dp[pos][i]) &amp;#123; // 如果左侧是对称        path.add(s.substring(pos,i+1));         helper(res, path, dp, s, i+1);        path.remove(path.size()-1); // 左侧继续扩张    &amp;#125;&amp;#125;</code></pre><h2 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h2><h3 id="Parentness-系列"><a href="#Parentness-系列" class="headerlink" title="Parentness 系列"></a>Parentness 系列</h3><h4 id="22-Generate-Parentheses"><a href="#22-Generate-Parentheses" class="headerlink" title="22 Generate Parentheses"></a>22 Generate Parentheses</h4><p>回溯法基础  </p><pre><code class="java">    public void helper(List&lt;String&gt; result, String tmp, int lefts, int rights)    // lefts表示左括号剩余个数 rights表示右括号剩余个数    // 递归的选择 lefts &lt; rights的时候 才能加右括号    // 结束条件：rights == 0</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode 团灭dp算法</title>
+      <link href="/2020/08/01/leetcode-tuan-mie-dp-suan-fa/"/>
+      <url>/2020/08/01/leetcode-tuan-mie-dp-suan-fa/</url>
+      
+        <content type="html"><![CDATA[<h2 id="DP算法总结"><a href="#DP算法总结" class="headerlink" title="DP算法总结"></a>DP算法总结</h2><a id="more"></a><h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>符合最优子结构</p><blockquote><p>在任意状态时 子问题必须互相<strong>独立</strong> <br><br>说人话 每个状态都可以作为当前的答案 最终答案也只是一个状态下的对应解而已</p></blockquote><h3 id="基本dp流程"><a href="#基本dp流程" class="headerlink" title="基本dp流程"></a>基本dp流程</h3><blockquote><p>明确「状态」 -&gt; 定义 dp 数组/函数的含义 -&gt; 明确「选择」-&gt; 明确 base case</p></blockquote><p>dp数组的定义不同 会有不同解法<br>状态可以选index 也可以选max length 甚至可以是答案</p><ol><li>状态<br>举例：<br>可能是index<br>可能是目标金额</li><li>dp函数的定义<br>函数 dp(n)表示，当前的目标金额是n，至少需要dp(n)个硬币</li><li>确定「选择」并择优<br>选择可能有很多种<br>比如 盗窃问题里偷或不偷 也可能是多选中的一种 用for循环去对选择择优</li><li>明确 base case</li></ol><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>Top Bottom：递归<br><img src="/2020/08/01/leetcode-tuan-mie-dp-suan-fa/dp_recursive.png" alt="recursive"></p><p>Bottom Top：迭代<br><img src="/2020/08/01/leetcode-tuan-mie-dp-suan-fa/dp_iterative.png" alt="iterative"></p><h3 id="最后考虑去除dp数组"><a href="#最后考虑去除dp数组" class="headerlink" title="最后考虑去除dp数组"></a>最后考虑去除dp数组</h3><p>如果每个状态只跟其他一两个状态有关系 那么只用几个变量var来存previous状态 从而不用整个数组</p><h2 id="DP经典问题"><a href="#DP经典问题" class="headerlink" title="DP经典问题"></a>DP经典问题</h2><h3 id="Buy-and-Sell-Stocks"><a href="#Buy-and-Sell-Stocks" class="headerlink" title="Buy and Sell Stocks"></a>Buy and Sell Stocks</h3><p><strong>交易次数</strong>：一次限制 两次限制 k次 无数次<br><strong>额外</strong>：冷冻期 手续费  </p><p>每天都有三种「选择」：买入、卖出、无操作<br>这个问题的「状态」有三个，第一个是天数，第二个是允许交易的最大次数，第三个是当前的持有状态（即之前说的 rest 的状态，我们不妨用 1 表示持有，0 表示没有持有）<br>比如说 dp[3][2][1] 的含义就是：今天是第三天，我现在手上持有着股票，至今最多进行 2 次交易。</p><p><img src="/2020/08/01/leetcode-tuan-mie-dp-suan-fa/dp_stock_selection.png" alt="dp_stock_selection"></p><p><img src="/2020/08/01/leetcode-tuan-mie-dp-suan-fa/dp_stock_equation.png" alt="dp_stock_equation"><br>当k=1 或者k为正无穷时 可以忽略k  </p><blockquote><p>另外由于dp只跟前一个状态有关 所以可以抛弃数组 只用两个变量 保存前一个状态和当前状态（当k无关时）<br>当k被赋值时 需要多一层k循环  </p></blockquote><h3 id="House-Robber"><a href="#House-Robber" class="headerlink" title="House Robber"></a>House Robber</h3><p><strong>题目</strong>：数组 环形 树  </p><ol><li>数组时, 可以采用bottom top的双循环解法 i表示rob的起点  这样更好做一点 也可以使用top bottom的递归dp算法</li><li>环形时 一样的递归算法 只不过两个方案 一种是n-1为终点 一种是1为起点 两个取最大</li><li>树状 可以用数组表示 result[0] [1]分别表示抢或不抢 dp(node)返回结果是result[x,y] 一直到node==null时停止  </li></ol><h3 id="背包knapsack01"><a href="#背包knapsack01" class="headerlink" title="背包knapsack01"></a>背包knapsack01</h3><p>状态：物品index 容量<br>选择：装 不装</p><p>Dp[i][w]含义：前i个物品 容量w的包<br>状态转移方程：<br>边界情况base case<br>如果把二维arr转成一维 小心影响 可能要倒序遍历</p><h3 id="完全背包"><a href="#完全背包" class="headerlink" title="完全背包"></a>完全背包</h3><p>一样的 只是状态转移方程有变化</p><h3 id="高楼鸡蛋"><a href="#高楼鸡蛋" class="headerlink" title="高楼鸡蛋"></a>高楼鸡蛋</h3><p>状态： 鸡蛋个数 层数<br>选择：可以从所有N层去扔<br>状态转移方程：N层挨个尝试 取最小值 -&gt; 再次根据鸡蛋是否破碎 分上下层选择最差情况<br>space：使用二维数组保存 </p><p>更优解法：<br>其实答案也可以是一种状态<br>Dp[K][m] 表示k个鸡蛋 扔m次 最多能扔几层楼<br>Dp[k][m] = dp[k-1][m-1] + dp[k][m-1]+1 扔完之后 根据结果 我还可以继续往上或往下走 再扔m-1次 1表示当前这个楼层<br>判断循环的结束标志dp[][] &gt; N 当求到的结果刚好大于N时 说明这是最坏情况总层数已达到</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+            <tag> 团灭 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>post文章 讲解</title>
+      <link href="/2020/07/30/fa-bu-wen-zhang-shuo-ming-shu/"/>
+      <url>/2020/07/30/fa-bu-wen-zhang-shuo-ming-shu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="发布文章说明书-๑•̀ㅂ•́-و✧"><a href="#发布文章说明书-๑•̀ㅂ•́-و✧" class="headerlink" title="发布文章说明书(๑•̀ㅂ•́)و✧"></a>发布文章说明书(๑•̀ㅂ•́)و✧</h1><a id="more"></a><h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1 标题"></a>1 标题</h2><blockquote><p>多级标题 ###</p></blockquote><h2 id="2-列表"><a href="#2-列表" class="headerlink" title="2 列表"></a>2 列表</h2><blockquote><p>有序 ‘1.’<br>无序 标题 *<br>引用 &gt;</p></blockquote><h2 id="3-分割线"><a href="#3-分割线" class="headerlink" title="3 分割线"></a>3 分割线</h2><blockquote><p>‘—–’</p></blockquote><h2 id="4-链接"><a href="#4-链接" class="headerlink" title="4 链接"></a>4 链接</h2><p>转换: <a href="https://www.runoob.com/">菜鸟教程</a> [菜鸟教程](<a href="https://www.runoob.com/">https://www.runoob.com</a>)<br>直接引用: &lt;<a href="https://www.runoob.com>/">https://www.runoob.com&gt;</a></p><h2 id="5-加载图片"><a href="#5-加载图片" class="headerlink" title="5 加载图片"></a>5 加载图片</h2><pre><code>![recursive](dp_recursive.png)&amp;#123;% asset_path slug %&amp;#125;&amp;#123;% asset_img slug [title] %&amp;#125;&amp;#123;% asset_link slug [title] %&amp;#125;&amp;#123;% asset_img example.jpg This is an example image %&amp;#125; ## 举例</code></pre><h2 id="6-代码块"><a href="#6-代码块" class="headerlink" title="6 代码块"></a>6 代码块</h2><p>单行 ``</p><p>段落 ```bash```</p><h2 id="7-强调"><a href="#7-强调" class="headerlink" title="7 强调"></a>7 强调</h2><p>### 强调 </p><p>_倾斜_</p><p>**加粗**</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> general </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2020/07/30/hello-world/"/>
+      <url>/2020/07/30/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new "My New Post"</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
   
   
 </search>
