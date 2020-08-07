@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"></head>
+<meta name="generator" content="Hexo 5.0.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
 <body>
@@ -474,14 +474,13 @@
 <p>‘—–’</p>
 </blockquote>
 <h2 id="4-链接"><a href="#4-链接" class="headerlink" title="4 链接"></a>4 链接</h2><p>转换: <a target="_blank" rel="noopener" href="https://www.runoob.com/">菜鸟教程</a> [菜鸟教程](<a target="_blank" rel="noopener" href="https://www.runoob.com/">https://www.runoob.com</a>)<br>直接引用: &lt;<a href="https://www.runoob.com>/">https://www.runoob.com&gt;</a></p>
-<h2 id="5-加载图片"><a href="#5-加载图片" class="headerlink" title="5 加载图片"></a>5 加载图片</h2><pre><code>![recursive](dp_recursive.png)
-&amp;#123;% asset_path slug %&amp;#125;
-&amp;#123;% asset_img slug [title] %&amp;#125;
-&amp;#123;% asset_link slug [title] %&amp;#125;
-&amp;#123;% asset_img example.jpg This is an example image %&amp;#125; ## 举例</code></pre>
-<h2 id="6-代码块"><a href="#6-代码块" class="headerlink" title="6 代码块"></a>6 代码块</h2><p>单行 ``</p>
+<h2 id="5-加载图片"><a href="#5-加载图片" class="headerlink" title="5 加载图片"></a>5 加载图片</h2><figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line">![recursive](dp_recursive.png)</span><br><span class="line">{% asset_path slug %}</span><br><span class="line">{% asset_img slug [title] %}</span><br><span class="line">{% asset_link slug [title] %}</span><br><span class="line">{% asset_img example.jpg This is an example image %} ## 举例</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="6-代码块"><a href="#6-代码块" class="headerlink" title="6 代码块"></a>6 代码块</h2><figure class="highlight plain"><figcaption><span>[lang:java] [title] [url] [link text]</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">code block</span><br></pre></td></tr></tbody></table></figure>
+
+<p>单行 ``</p>
 <p>段落 ```bash```</p>
-<h2 id="7-强调"><a href="#7-强调" class="headerlink" title="7 强调"></a>7 强调</h2><p>### 强调 </p>
+<h2 id="7-强调"><a href="#7-强调" class="headerlink" title="7 强调"></a>7 强调</h2><p>### 强调  </p>
 <p>_倾斜_</p>
 <p>**加粗**</p>
 <script>
