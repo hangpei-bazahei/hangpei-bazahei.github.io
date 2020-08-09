@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.0.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -496,7 +496,14 @@
     <span class="token comment" spellcheck="true">// 结束条件：rights == 0</span></code></pre>
 <h4 id="241-Different-Ways-to-Add-Parentheses"><a href="#241-Different-Ways-to-Add-Parentheses" class="headerlink" title="241. Different Ways to Add Parentheses"></a>241. Different Ways to Add Parentheses</h4><p>回溯法<br>先将整个String转换成List&lt;String&gt; 每个unit是num或ops  </p>
 <p>在helper函数中 依次遍历ops<br>在每个循环中 递归左侧和右侧结果<br>然后根据当前的ops 求出结果<br>这个递归的意义在于 当前循环的ops 是最后计算的符号  </p>
-<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><h4 id="187-Repeated-DNA-Sequences"><a href="#187-Repeated-DNA-Sequences" class="headerlink" title="187. Repeated DNA Sequences"></a>187. Repeated DNA Sequences</h4><p>以10为长度 依次向后遍历<br>用HashSet保存出现过的String 命名exist<br>用另一个HashSet保存结果<br>如果新的String是第一次见 则加入到exist 如果不是 则加入到结果</p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><h4 id="187-Repeated-DNA-Sequences"><a href="#187-Repeated-DNA-Sequences" class="headerlink" title="187. Repeated DNA Sequences"></a>187. Repeated DNA Sequences</h4><p>以10为长度 依次向后遍历<br>用HashSet保存出现过的String 命名exist<br>用另一个HashSet保存结果<br>如果新的String是第一次见 则加入到exist 如果不是 则加入到结果  </p>
+<h4 id="165-Compare-Version-Numbers"><a href="#165-Compare-Version-Numbers" class="headerlink" title="165. Compare Version Numbers"></a>165. Compare Version Numbers</h4><p>性能最好的方法: 从左读取String 通过<code>num1 = num1*10+tmp</code>的方法转成int 读到.或者结束为止 然后比较</p>
+<h4 id="8-String-to-Integer-atoi"><a href="#8-String-to-Integer-atoi" class="headerlink" title="8. String to Integer (atoi)"></a>8. String to Integer (atoi)</h4><p>只是考察 if while的搭配用法<br>从前向后遍历 先处理空格(while)和符号(if) 最后处理数字(while)  </p>
+<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><h3 id="Math-Calculate"><a href="#Math-Calculate" class="headerlink" title="Math Calculate"></a>Math Calculate</h3><h4 id="43-Multiply-Strings"><a href="#43-Multiply-Strings" class="headerlink" title="43. Multiply Strings"></a>43. Multiply Strings</h4><p>Use an int array to save each place (one, ten, hundred)<br><code>int[] tmp = new int[m+n]; // first index is one place</code>  </p>
+<pre class=" language-java"><code class="language-java">    <span class="token keyword">int</span> sum <span class="token operator">=</span> c1 <span class="token operator">*</span> c2 <span class="token operator">+</span> tmp<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// calculate sum, include the ten place from last multiple, but add as one place</span>
+    tmp<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> sum<span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// update one place</span>
+    tmp<span class="token punctuation">[</span>index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">[</span>index<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> sum<span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// update ten place, will be used in the next loop</span></code></pre>
+<p>Once the array is completed, convert it to String  </p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
