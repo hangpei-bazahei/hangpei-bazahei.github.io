@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.1.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -505,7 +505,7 @@
 <ol>
 <li>数组时, 可以采用bottom top的双循环解法 i表示rob的起点  这样更好做一点 也可以使用top bottom的递归dp算法</li>
 <li>环形时 一样的递归算法 只不过两个方案 一种是n-1为终点 一种是1为起点 两个取最大</li>
-<li>树状 可以用数组表示 result[0] [1]分别表示抢或不抢 dp(node)返回结果是result[x,y] 一直到node==null时停止  </li>
+<li>树状 可以用数组表示 result[0] [1]分别表示抢或不抢 使用递归(int[]) dp(node)返回结果是result[x,y] 一直到node==null时停止<br>使用数组可以作为memo保存结果</li>
 </ol>
 <h3 id="背包knapsack01"><a href="#背包knapsack01" class="headerlink" title="背包knapsack01"></a>背包knapsack01</h3><p>状态：物品index 容量<br>选择：装 不装</p>
 <p>Dp[i][w]含义：前i个物品 容量w的包<br>状态转移方程：<br>边界情况base case<br>如果把二维arr转成一维 小心影响 可能要倒序遍历</p>

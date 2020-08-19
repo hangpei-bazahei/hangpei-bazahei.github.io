@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode-Daily, A Day of Javaer">
+    <meta name="keywords" content="LeetCode-团灭Tree, A Day of Javaer">
     <meta name="description" content="He does more than just Javaing">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>LeetCode-Daily | A Day of Javaer</title>
+    <title>LeetCode-团灭Tree | A Day of Javaer</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,7 +313,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">LeetCode-Daily</h1>
+                    <h1 class="description center-align post-title">LeetCode-团灭Tree</h1>
                 </div>
             </div>
         </div>
@@ -428,25 +428,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/LeetCode/">
-                                <span class="chip bg-color">LeetCode</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/LeetCode/" class="post-category">
-                                LeetCode
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -455,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-08-02
+                    2020-08-12
                 </div>
                 
 
@@ -471,61 +458,26 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="每日一题"><a href="#每日一题" class="headerlink" title="每日一题"></a>每日一题</h2><h2 id="dp"><a href="#dp" class="headerlink" title="dp"></a>dp</h2><hr>
-<h3 id="Palindromic系列"><a href="#Palindromic系列" class="headerlink" title="Palindromic系列"></a>Palindromic系列</h3><h4 id="5-Longest-Palindromic-Substring"><a href="#5-Longest-Palindromic-Substring" class="headerlink" title="5 Longest Palindromic Substring"></a>5 Longest Palindromic Substring</h4><blockquote>
-<p><strong>状态</strong>: 前后index<br><strong>dp</strong>: 使用boolen [][]来保存每个substring的结果 i j是substring的前后index  </p>
-</blockquote>
-<p>状态转移:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>l<span class="token operator">==</span>r <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>i<span class="token operator">-</span>j<span class="token operator">&lt;=</span><span class="token number">2</span><span class="token operator">||</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></code></pre>
-<h4 id="131-Palindrome-Partitioning"><a href="#131-Palindrome-Partitioning" class="headerlink" title="131 Palindrome Partitioning"></a>131 Palindrome Partitioning</h4><p>找出全部组合 使用dfs+dp<br>dp[][]负责boolean记录左右index<br>dfs再使用单for循环 暴力找答案</p>
-<blockquote>
-<p>dfs的选择: 从左侧开始 选择多长的substring作为第一起点<br>当左侧是完全对称 加入list 然后继续递归右侧  </p>
-</blockquote>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> pos<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>pos<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 如果左侧是对称</span>
-        path<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>pos<span class="token punctuation">,</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">helper</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> path<span class="token punctuation">,</span> dp<span class="token punctuation">,</span> s<span class="token punctuation">,</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        path<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 左侧继续扩张</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<h2 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h2><h3 id="Parentness-系列"><a href="#Parentness-系列" class="headerlink" title="Parentness 系列"></a>Parentness 系列</h3><h4 id="22-Generate-Parentheses"><a href="#22-Generate-Parentheses" class="headerlink" title="22 Generate Parentheses"></a>22 Generate Parentheses</h4><p>回溯法基础  </p>
-<pre class=" language-java"><code class="language-java">    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">helper</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>String<span class="token operator">></span> result<span class="token punctuation">,</span> String tmp<span class="token punctuation">,</span> <span class="token keyword">int</span> lefts<span class="token punctuation">,</span> <span class="token keyword">int</span> rights<span class="token punctuation">)</span>
-    <span class="token comment" spellcheck="true">// lefts表示左括号剩余个数 rights表示右括号剩余个数</span>
-    <span class="token comment" spellcheck="true">// 递归的选择 lefts &lt; rights的时候 才能加右括号</span>
-    <span class="token comment" spellcheck="true">// 结束条件：rights == 0</span></code></pre>
-<h4 id="241-Different-Ways-to-Add-Parentheses"><a href="#241-Different-Ways-to-Add-Parentheses" class="headerlink" title="241. Different Ways to Add Parentheses"></a>241. Different Ways to Add Parentheses</h4><p>回溯法<br>先将整个String转换成List&lt;String&gt; 每个unit是num或ops  </p>
-<p>在helper函数中 依次遍历ops<br>在每个循环中 递归左侧和右侧结果<br>然后根据当前的ops 求出结果<br>这个递归的意义在于 当前循环的ops 是最后计算的符号  </p>
-<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><h4 id="187-Repeated-DNA-Sequences"><a href="#187-Repeated-DNA-Sequences" class="headerlink" title="187. Repeated DNA Sequences"></a>187. Repeated DNA Sequences</h4><p>以10为长度 依次向后遍历<br>用HashSet保存出现过的String 命名exist<br>用另一个HashSet保存结果<br>如果新的String是第一次见 则加入到exist 如果不是 则加入到结果  </p>
-<h4 id="165-Compare-Version-Numbers"><a href="#165-Compare-Version-Numbers" class="headerlink" title="165. Compare Version Numbers"></a>165. Compare Version Numbers</h4><p>性能最好的方法: 从左读取String 通过<code>num1 = num1*10+tmp</code>的方法转成int 读到.或者结束为止 然后比较</p>
-<h4 id="8-String-to-Integer-atoi"><a href="#8-String-to-Integer-atoi" class="headerlink" title="8. String to Integer (atoi)"></a>8. String to Integer (atoi)</h4><p>只是考察 if while的搭配用法<br>从前向后遍历 先处理空格(while)和符号(if) 最后处理数字(while)  </p>
-<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><h3 id="Math-Calculate"><a href="#Math-Calculate" class="headerlink" title="Math Calculate"></a>Math Calculate</h3><h4 id="43-Multiply-Strings"><a href="#43-Multiply-Strings" class="headerlink" title="43. Multiply Strings"></a>43. Multiply Strings</h4><p>Use an int array to save each place (one, ten, hundred)<br><code>int[] tmp = new int[m+n]; // first index is one place</code>  </p>
-<pre class=" language-java"><code class="language-java">    <span class="token keyword">int</span> sum <span class="token operator">=</span> c1 <span class="token operator">*</span> c2 <span class="token operator">+</span> tmp<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// calculate sum, include the ten place from last multiple, but add as one place</span>
-    tmp<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> sum<span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// update one place</span>
-    tmp<span class="token punctuation">[</span>index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">[</span>index<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> sum<span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// update ten place, will be used in the next loop</span></code></pre>
-<p>Once the array is completed, convert it to String  </p>
-<h4 id="29-Divide-Two-Integers"><a href="#29-Divide-Two-Integers" class="headerlink" title="29. Divide Two Integers"></a>29. Divide Two Integers</h4><p>think of it as binary division  </p>
-<blockquote>
-<p><code>dividend = (2^m + 2^n + ... + 2^0) * div</code>  </p>
-</blockquote>
-<p>div * 2 is like div&lt;&lt;1, so no multiply is needed<br>simply move left or right</p>
-<h2 id="Tree"><a href="#Tree" class="headerlink" title="Tree"></a>Tree</h2><h3 id="DFS-回溯法"><a href="#DFS-回溯法" class="headerlink" title="DFS 回溯法"></a>DFS 回溯法</h3><h4 id="543-Diameter-of-Binary-Tree"><a href="#543-Diameter-of-Binary-Tree" class="headerlink" title="543. Diameter of Binary Tree"></a>543. Diameter of Binary Tree</h4><p>From Top to Bottom, calculate the height of the cur node. Meanwhile, update the max Length.<br>Max Length is equal to left height + right height<br><code>result = Math.max(result, left+right); // Make result as global var</code></p>
-<h4 id="101-Symmetric-Tree"><a href="#101-Symmetric-Tree" class="headerlink" title="101. Symmetric Tree"></a>101. Symmetric Tree</h4><ol>
-<li><p>DFS<br>Define a boolean helper. It compares the children node of node1 and node2. If both pass, return true  </p>
-</li>
-<li><p>Iterative/BFS</p>
-</li>
-</ol>
-<p>Use two <code>Queue&lt;TreeNode&gt;</code> to save left and right node.<br>In each loop, poll from the queue to compare; then add its childrens to the two queues<br>It is looping one layer after another</p>
-<h4 id="617-Merge-Two-Binary-Trees"><a href="#617-Merge-Two-Binary-Trees" class="headerlink" title="617. Merge Two Binary Trees"></a>617. Merge Two Binary Trees</h4><blockquote>
-<p>If we can manipulate Tree1 or 2<br>When t1 is null, just return t2<br>If t1 and t2 exist, then new TreeNode and use recur the cal its left and right  </p>
-</blockquote>
-<h2 id="Matrix"><a href="#Matrix" class="headerlink" title="Matrix"></a>Matrix</h2><h3 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h3><h4 id="54-Spiral-Matrix"><a href="#54-Spiral-Matrix" class="headerlink" title="54. Spiral Matrix"></a>54. Spiral Matrix</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>left<span class="token operator">&lt;=</span>right <span class="token operator">&amp;&amp;</span> top <span class="token operator">&lt;=</span>bottom<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">for</span> <span class="token comment" spellcheck="true">// go right, top++</span>
-    <span class="token keyword">for</span> <span class="token comment" spellcheck="true">// go down, right--</span>
-    <span class="token keyword">for</span> <span class="token comment" spellcheck="true">// go left, bottom--</span>
-    <span class="token keyword">for</span> <span class="token comment" spellcheck="true">// go top, left++</span>
-<span class="token punctuation">}</span></code></pre>
+                <h2 id="Tree-Summary"><a href="#Tree-Summary" class="headerlink" title="Tree Summary"></a>Tree Summary</h2><a id="more"></a>
+
+<h3 id="Iteration-循环遍历"><a href="#Iteration-循环遍历" class="headerlink" title="Iteration 循环遍历"></a>Iteration 循环遍历</h3><h4 id="Layer-by-Layer"><a href="#Layer-by-Layer" class="headerlink" title="Layer by Layer"></a>Layer by Layer</h4><p><strong>Queue</strong><br>It is BFS solution<br>In each loop, poll all the nodes from queue. They must be on the same layer<br>Then save all the next layers into the queue. This is how we control, at the loop, the queue only keeps the nodes in the same layer</p>
+<h4 id="PreOrder"><a href="#PreOrder" class="headerlink" title="PreOrder"></a>PreOrder</h4><p><strong>Stack</strong><br>When iterates to each node, use stack to push right, then left<br>for each loop, pop a node to work on  </p>
+<h4 id="InOrder"><a href="#InOrder" class="headerlink" title="InOrder"></a>InOrder</h4><p><strong>Stack</strong><br>It is also using stack but in a different way.<br>The key to this is using embedded ‘while’</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// dive to the farthest left, keep pushing all passby nodes to stack because we deal with them later </span>
+    <span class="token punctuation">}</span> <span class="token keyword">while</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// keep poping, unless the node has a right node </span>
+        <span class="token comment" spellcheck="true">// switch to right node, then back to the first 'while'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span>  </code></pre>
+<h3 id="Path-Sum"><a href="#Path-Sum" class="headerlink" title="Path Sum"></a>Path Sum</h3><h4 id="find-all-root-to-leaf-paths-where-each-path’s-sum-equals-the-given-sum"><a href="#find-all-root-to-leaf-paths-where-each-path’s-sum-equals-the-given-sum" class="headerlink" title="find all root-to-leaf paths where each path’s sum equals the given sum"></a>find all root-to-leaf paths where each path’s sum equals the given sum</h4><p>Use DFS</p>
+<ul>
+<li>Remember to backtrack on the path (remove the current/last node)</li>
+<li>When saving the tmp list to the result <code>result.add(new LinkedList(tmp))</code></li>
+</ul>
+<h3 id="Bottom-Top-从叶子往上找"><a href="#Bottom-Top-从叶子往上找" class="headerlink" title="Bottom Top 从叶子往上找"></a>Bottom Top 从叶子往上找</h3><p>Null is level -1;<br>The leaf is level 0;<br>Use (int) backtrack to calculate from the bottom<br>If the question ask for List, then pass the List as Variable  </p>
+<p>A good way to look at the problem: Turn the Tree picture 180 degre around!</p>
+<h3 id="Count-Node-统计子树总数"><a href="#Count-Node-统计子树总数" class="headerlink" title="Count Node 统计子树总数"></a>Count Node 统计子树总数</h3><h4 id="find-kth-smallest"><a href="#find-kth-smallest" class="headerlink" title="find kth smallest"></a>find kth smallest</h4><p>BST左子树总共k-1个节点 – 代表当前是kth smallest<br><code>return countNodes(node.left) + countNodes(node.right) + 1;</code>  </p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -569,7 +521,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hangpei-bazahei.github.io/2020/08/02/leetcode-daily/">https://hangpei-bazahei.github.io/2020/08/02/leetcode-daily/</a>
+                    <a href="https://hangpei-bazahei.github.io/2020/08/12/leetcode-tuan-mie-tree/">https://hangpei-bazahei.github.io/2020/08/12/leetcode-tuan-mie-tree/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -606,11 +558,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/LeetCode/">
-                                    <span class="chip bg-color">LeetCode</span>
-                                </a>
-                            
+                            <span class="chip bg-color">No tag</span>
                         </div>
                     
                 </div>
@@ -776,61 +724,41 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/08/03/leetcode-tuan-mie-dfs/">
+                <a href="/2020/08/12/leetcode-tuan-mie-tree/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="LeetCode-团灭dfs">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="LeetCode-团灭Tree">
                         
-                        <span class="card-title">LeetCode-团灭dfs</span>
+                        <span class="card-title">LeetCode-团灭Tree</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            DFS算法总结
+                            Tree Summary
 
-前提dfs算法 就是回溯
-流程
-判断边界  
-根据条件递归  
-optional回溯  
-
-回溯是重新初始化 这样是可以再下次重新递归的时候 重新开始不像动态规划存在重叠子问题可以优化，回溯算法就是纯暴力穷举，复杂度一般都
+Iteration 循环遍历Layer by LayerQueueIt is BFS solutionIn each loop, poll all the nodes from queue. They must 
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-12
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/LeetCode/" class="post-category">
-                                    LeetCode
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Hang Pei
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/LeetCode/">
-                        <span class="chip bg-color">LeetCode</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9B%A2%E7%81%AD/">
-                        <span class="chip bg-color">团灭</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -841,38 +769,33 @@ optional回溯
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/01/leetcode-tuan-mie-dp-suan-fa/">
+                <a href="/2020/08/06/system-design-guide/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="LeetCode 团灭dp算法">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="System-Design-Guide">
                         
-                        <span class="card-title">LeetCode 团灭dp算法</span>
+                        <span class="card-title">System-Design-Guide</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            DP算法总结
+                            算法总结
 
-前提符合最优子结构
-
-在任意状态时 子问题必须互相独立 说人话 每个状态都可以作为当前的答案 最终答案也只是一个状态下的对应解而已
-
-基本dp流程
-明确「状态」 -&gt; 定义 dp 数组/函数的含义 -&gt; 明确「选
+流程我面试的大概流程如下【3分钟】理解需求 （询问系统的商业目的 + 询问系统的功能和技术需求 + 定义成功）【0-5分钟】资源需求（optional)（计算需要多少台机器，需要多少内存硬盘和CPU的能力）【5分钟】High-l
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/LeetCode/" class="post-category">
-                                    LeetCode
+                            <a href="/categories/System-Design/" class="post-category">
+                                    System Design
                                 </a>
                             
                             
@@ -882,12 +805,8 @@ optional回溯
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/LeetCode/">
-                        <span class="chip bg-color">LeetCode</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9B%A2%E7%81%AD/">
-                        <span class="chip bg-color">团灭</span>
+                    <a href="/tags/System-Design/">
+                        <span class="chip bg-color">System Design</span>
                     </a>
                     
                 </div>

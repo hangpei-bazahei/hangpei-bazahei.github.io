@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.1.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -473,12 +473,12 @@
 <h2 id="3-分割线"><a href="#3-分割线" class="headerlink" title="3 分割线"></a>3 分割线</h2><blockquote>
 <p>‘—–’</p>
 </blockquote>
-<h2 id="4-链接"><a href="#4-链接" class="headerlink" title="4 链接"></a>4 链接</h2><p>转换: <a target="_blank" rel="noopener" href="https://www.runoob.com/">菜鸟教程</a> [菜鸟教程](<a target="_blank" rel="noopener" href="https://www.runoob.com/">https://www.runoob.com</a>)<br>直接引用: &lt;<a href="https://www.runoob.com>/">https://www.runoob.com&gt;</a></p>
+<h2 id="4-链接"><a href="#4-链接" class="headerlink" title="4 链接"></a>4 链接</h2><p>转换: <a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程</a> [菜鸟教程](<a href="https://www.runoob.com/" target="_blank" rel="noopener">https://www.runoob.com</a>)<br>直接引用: &lt;<a href="https://www.runoob.com>/" target="_blank" rel="noopener">https://www.runoob.com&gt;</a></p>
 <h2 id="5-加载图片"><a href="#5-加载图片" class="headerlink" title="5 加载图片"></a>5 加载图片</h2><pre class=" language-html"><code class="language-html">![recursive](dp_recursive.png)
-<span class="token entity" title="&#123;">&amp;#123;</span>% asset_path slug %<span class="token entity" title="&#125;">&amp;#125;</span>
-<span class="token entity" title="&#123;">&amp;#123;</span>% asset_img slug [title] %<span class="token entity" title="&#125;">&amp;#125;</span>
-<span class="token entity" title="&#123;">&amp;#123;</span>% asset_link slug [title] %<span class="token entity" title="&#125;">&amp;#125;</span>
-<span class="token entity" title="&#123;">&amp;#123;</span>% asset_img example.jpg This is an example image %<span class="token entity" title="&#125;">&amp;#125;</span> ## 举例</code></pre>
+{% asset_path slug %}
+{% asset_img slug [title] %}
+{% asset_link slug [title] %}
+{% asset_img example.jpg This is an example image %} ## 举例</code></pre>
 <h2 id="6-代码块"><a href="#6-代码块" class="headerlink" title="6 代码块"></a>6 代码块</h2><pre><code>code block</code></pre>
 
 <pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">log</span><span class="token punctuation">(</span>mes<span class="token punctuation">)</span><span class="token punctuation">:</span>
